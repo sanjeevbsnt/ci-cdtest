@@ -1,4 +1,11 @@
-today = datetime.date.today()
-print("Today's date is:", today.strftime("%Y-%m-%d"))
-  print("This is a sample Python script for CI/CD testing.")  # Wrong indentation
+import datetime
 
+# Replace with your actual birthday (YYYY-MM-DD format)
+birthday = datetime.date(year=2024, month=3, day=21)  # Adjust for your birthday
+
+today = datetime.date.today()
+
+if today == birthday:
+    print("Happy Birthday!")
+else:
+    print("Today is not your birthday
