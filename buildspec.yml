@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - pip install --upgrade pip
+      - pip install sonar-scanner  # Install SonarQube scanner
+
+  build:
+    commands:
+      - python your_script.py  # Replace with your actual Python script
+
+  post_build:
+    commands:
+      - sonar-scanner -Dsonar.projectKey=your_project_key \
+        -Dsonar.sources=. \
+        -Dsonar.host.url=your_sonarqube_server_url \
+        -Dsonar.login=your_sonarqube_token
